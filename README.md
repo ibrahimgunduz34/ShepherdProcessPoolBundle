@@ -1,4 +1,7 @@
 # Shepherd Process Pool
+
+[![Build Status](https://travis-ci.org/ibrahimgunduz34/ShepherdProcessPoolBundle.svg?branch=master)](https://travis-ci.org/ibrahimgunduz34/ShepherdProcessPoolBundle)
+
 Shepherd is an easy way to manage Symfony Process instances in a simple pool.
 
 ## How To Configure 
