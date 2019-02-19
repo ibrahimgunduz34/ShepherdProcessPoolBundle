@@ -11,10 +11,10 @@ shepherd:
         max_processes: 4
         fail_on_error: true
     pools:
-        my_process_queue1:
+        foo:
             max_processes: 2
             fail_on_error: false
-        my_process_queue1:
+        bar:
             max_processes: 8
 ```
 
