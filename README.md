@@ -22,10 +22,17 @@ shepherd:
             max_processes: 8
 ```
 
+## How To Install
+
+Call the following command to add the package to your project as a composer dependency.
+```$xslt
+composer require ibrahimgunduz34/shepherd
+```
+
 ## How To Use 
 
-Basecially, Shepherd creates services for each pool definition. So 
-you can simply inject your pools anywhere. It, creates services 
+Basically, Shepherd creates services for each pool definition. So 
+you can simply inject the pools anywhere. It creates services 
 with`shepherd.pool.<pool name>` naming convention.
 
 ```yaml
