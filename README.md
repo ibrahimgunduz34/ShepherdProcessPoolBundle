@@ -2,7 +2,11 @@
 
 [![Build Status](https://travis-ci.org/ibrahimgunduz34/ShepherdProcessPoolBundle.svg?branch=master)](https://travis-ci.org/ibrahimgunduz34/ShepherdProcessPoolBundle)
 
-Shepherd is an easy way to manage Symfony Process instances in a simple pool.
+Shepherd is an easy way to run the processes in parallel. 
+Also, you can control how many processes you can run in 
+parallel or decide to stop all jobs in the queue if anyone 
+is failed.
+   
 
 ## How To Configure 
 ```yaml
