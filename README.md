@@ -5,10 +5,20 @@
 Shepherd is an easy way to run the processes in parallel. 
 Also, you can control how many processes you can run in 
 parallel or decide to stop all jobs in the queue if anyone 
-is failed.
-   
+is failed.   
+
+## How To Install
+
+Call the following command to add the package to your project as a composer dependency.
+```$xslt
+composer require ibrahimgunduz34/shepherd
+```
 
 ## How To Configure 
+You can simply define your process pools in `pools` section separately. 
+Also, you can define some default options in `defaults` section and 
+override them in each pool definition if it's needed.
+  
 ```yaml
 shepherd:
     defaults:
@@ -20,13 +30,6 @@ shepherd:
             fail_on_error: false
         bar:
             max_processes: 8
-```
-
-## How To Install
-
-Call the following command to add the package to your project as a composer dependency.
-```$xslt
-composer require ibrahimgunduz34/shepherd
 ```
 
 ## How To Use 
