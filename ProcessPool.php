@@ -58,6 +58,7 @@ class ProcessPool
         while (count($this->pool) > 0) {
             /** @var Process $process */
             foreach ($this->pool as $key => $process) {
+                usleep(50000);
                 if ($process->isRunning()) {
                     continue;
                 }

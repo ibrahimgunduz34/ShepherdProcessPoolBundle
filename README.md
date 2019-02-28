@@ -65,9 +65,9 @@ class MyService
     
     public function performSomething() {
         //...
-        $this->pool->append(new Process(__DIR__ . '../bin/console', 'do:something', 'param1', 'param2'));
-        $this->pool->append(new Process(__DIR__ . '../bin/console', 'do:something', 'param3', 'param4'));
-        $this->pool->append(new Process(__DIR__ . '../bin/console', 'do:something', 'param5', 'param6'));
+        $this->pool->append(new Process([__DIR__ . '../bin/console', 'do:something', 'param1', 'param2']));
+        $this->pool->append(new Process([__DIR__ . '../bin/console', 'do:something', 'param3', 'param4']));
+        $this->pool->append(new Process([__DIR__ . '../bin/console', 'do:something', 'param5', 'param6']));
         //...
         //...
         //...
@@ -93,32 +93,18 @@ Then you must handle the error which is thrown by `start()` method.
 
 ```php
 <?php
-namespace App\Service;
-
-use Shepherd\Bundle\ProcessPoolBundle\ProcessPool;
-use Shepherd\Bundle\ProcessPoolBundle\Exception\ProcessExecutionError;
-use Symfony\Component\Process\Process;
-
-
-class MyService 
-{
-    /** @var ProcessPool */
-    private $pool;
-        
-    function __construct(ProcessPool $pool) {
-        $this->pool = $pool; 
-    }
+ //...
     
     function performSomething() {
         //...
         try {
             $this->pool->start();    
-        } catch (ProcessExecutionError $exception) {
+        } catch (Shepherd\Bundle\ProcessPoolBundle\Exception\ProcessExecutionError $exception) {
             //TODO: Do something...
         }
-        
         //...
     }   
-}
-
+ //...
 ```
+
+You can find an example use case in the [**this blog post**](https://medium.com/@ibrahimgunduz34/how-to-speed-up-multiple-file-transfer-process-by-parallelizing-the-downloads-in-symfony-1beb160771f0):
