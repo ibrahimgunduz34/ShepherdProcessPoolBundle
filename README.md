@@ -42,7 +42,7 @@ with`shepherd.pool.<pool name>` naming convention.
 App\Service\MyService:
     class: App\Service\MyService
     arguments:
-        - 'shepherd.pool.foo'
+        - '@shepherd.pool.foo'
 ```
 
 You can keep adding new processes until starting the pool processing.
